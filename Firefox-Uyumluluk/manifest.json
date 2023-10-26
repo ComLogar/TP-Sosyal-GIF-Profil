@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Technopat GIF Avatar - BC",
+  "version": "0.1",
+  "description": "Geriye uyumlu GIF avatar eklentisi.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "648405.sosyal@technopat.net",
+      "strict_min_version": "48.0"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.technopat.net/sosyal/*"
+      ],
+      "js": [
+        "backport.js"
+      ],
+      "css": [
+        "aspect-ratio-hotfix.css"
+      ]
+    }
+  ]
+}
