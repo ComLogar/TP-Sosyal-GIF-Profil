@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Technopat GIF Avatar",
+  "version": "1.1",
+  "description": "GIF profil fotoğrafı eklentisi",
+  "permissions": [
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "https://www.technopat.net/sosyal/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "648405.sosyal@technopat.net",
+      "strict_min_version": "113.0"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.technopat.net/sosyal/*"
+      ],
+      "css": [
+        "aspect-ratio-hotfix.css"
+      ]
+    }
+  ]
+}
